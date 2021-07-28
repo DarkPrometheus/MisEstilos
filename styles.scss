@@ -1,0 +1,15 @@
+@import "./base/settings";
+@import "./base/base";
+@import "./mixins/mixins";
+
+// Mobile
+@import "./components/mobile/NavBar.scss";
+@import "./components/mobile/Home.scss";
+
+// Tablet
+@import "./components/tablet/NavBar.scss";
+@import "./components/tablet/Home.scss";
+
+// Desktop
+@import "./components/desktop/NavBar.scss";
+@import "./components/desktop/Home.scss";

@@ -1,5 +1,13 @@
 @import "./base/settings";
 @import "./base/base";
+
+// Mixins
+@import "./mixins/dimensiones";
+@import "./mixins/estilosDeElementos";
+@import "./mixins/estilosVisuales";
+@import "./mixins/flexbox";
+@import "./mixins/grid";
+@import "./mixins/posicionamientos";
 @import "./mixins/mixins";
 
 // Mobile

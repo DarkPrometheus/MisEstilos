@@ -1,0 +1,19 @@
+
+/**
+ * Mixin flex.
+ *
+ * Aplica un contenedor flexible con dirección y alineación personalizadas.
+ *
+ * Argumentos:
+ *   - $direction: Dirección del contenedor flexible (row, row-reverse, column, column-reverse).
+ *   - $center: Opcional. Centra los elementos horizontal y verticalmente dentro del contenedor si se establece en 'center'.
+ */
+@mixin flex($direction, $center) {
+    display: flex;
+    flex-direction: $direction;
+
+    @if $center == 'center' {
+        justify-content: center;
+        align-items: center;
+    }
+}

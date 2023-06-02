@@ -1,0 +1,14 @@
+
+/**
+ * Mixin grid.
+ *
+ * Establece un contenedor con sistema de grilla utilizando columnas del mismo tamaño.
+ *
+ * Argumentos:
+ *   - $cols: Número de columnas en la grilla.
+ *   - $size: Tamaño de cada columna.
+ */
+@mixin grid($cols, $size) {
+    display: grid;
+    grid-template-columns: repeat($cols, $size);
+}

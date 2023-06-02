@@ -1,0 +1,26 @@
+
+/**
+ * Mixin pAbsolte.
+ *
+ * Establece la posición de un elemento como absoluta y lo sitúa en la esquina superior izquierda del contenedor padre.
+ */
+@mixin pAbsolte {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/**
+ * Mixin centerAbsolute.
+ *
+ * Establece la posición de un elemento como absoluta y lo centra horizontalmente en el contenedor padre.
+ */
+@mixin centerAbsolute {
+    @include disappearRotate;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+    font-size: 0.8rem;
+}

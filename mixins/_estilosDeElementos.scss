@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+/**
+ * Mixin para estilos de entrada (input).
+ *
+ * Aplica estilos personalizados a los elementos de entrada.
+ *
+ * Argumentos:
+ *   - $color: Color de fondo del elemento de entrada.
+ */
+@mixin input($color) {
+    all: unset;
+    background-color: $color;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.4rem;
+}
+
+/**
+ * Mixin para estilos de botón.
+ *
+ * Aplica estilos personalizados a los elementos de botón.
+ *
+ * Argumentos:
+ *   - $alto: Altura del botón.
+ *   - $ancho: Ancho del botón.
+ *   - $color: Color de fondo del botón.
+ */
+@mixin button($alto, $ancho, $color) {
+    all: unset;
+    cursor: pointer;
+    background-color: $color;
+    border: 0;
+    color: white;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    padding: $alto $ancho;
+    border-radius: 0.2rem;
+    font-family: 'Raleway', sans-serif;
+    &:hover {
+        background-color: lighten($color: $color, $amount: 7%);
+    }
+    &:active {
+        background-color: lighten($color: $color, $amount: 4%);
+    }
+}
+
+/**
+ * Mixin para aplicar bordes redondeados en la parte superior.
+ *
+ * Aplica bordes redondeados en la esquina superior derecha e izquierda.
+ *
+ * Argumentos:
+ *   - $size: Tamaño del radio de los bordes.
+ */
+@mixin radiusTop($size) {
+    border-top-right-radius: $size;
+    border-top-left-radius: $size;
+}
+
+/**
+ * Mixin para aplicar bordes redondeados en la parte inferior.
+ *
+ * Aplica bordes redondeados en la esquina inferior derecha e izquierda.
+ *
+ * Argumentos:
+ *   - $size: Tamaño del radio de los bordes.
+ */
+@mixin radiusBottom($size) {
+    border-bottom-right-radius: $size;
+    border-bottom-left-radius: $size;
+}

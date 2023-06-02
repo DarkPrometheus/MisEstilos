@@ -1,0 +1,114 @@
+
+/**
+ * Mixin para estilos personalizados de la barra de desplazamiento.
+ *
+ * Aplica estilos personalizados a la barra de desplazamiento en navegadores webkit.
+ *
+ * Argumentos:
+ *   - $x: Valor de la propiedad overflow-x para controlar la visibilidad horizontal de la barra de desplazamiento.
+ *   - $y: Valor de la propiedad overflow-y para controlar la visibilidad vertical de la barra de desplazamiento.
+ *
+ * Nota: Este mixin solo afecta a los navegadores webkit (Chrome, Safari, etc.).
+ */
+@mixin scrollbar($x, $y) {
+    overflow-x: $x;
+    overflow-y: $y;
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        &:hover {
+            background-color: lighten($color: rgb(148, 148, 148), $amount: 25%);
+        }
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(128, 128, 128);
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+        height: 90%;
+    }
+    &:focus::-webkit-scrollbar-thumb {
+        background-color: rgba(128, 128, 128, 0.2);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+/**
+ * Mixin para gradientes lineales.
+ *
+ * Genera un gradiente lineal entre dos colores.
+ *
+ * Argumentos:
+ *   - $start-color: Color de inicio del gradiente.
+ *   - $end-color: Color final del gradiente.
+ */
+@mixin gradient($start-color, $end-color) {
+    background: $start-color;
+    background: linear-gradient(to right, $start-color, $end-color);
+}
+
+/**
+ * Mixin para sombra de texto.
+ *
+ * Aplica una sombra de texto personalizada a un elemento.
+ *
+ * Argumentos:
+ *   - $color: Color de la sombra de texto.
+ *   - $x-offset: Desplazamiento horizontal de la sombra.
+ *   - $y-offset: Desplazamiento vertical de la sombra.
+ *   - $blur: Desenfoque de la sombra.
+ */
+@mixin text-shadow($color, $x-offset, $y-offset, $blur) {
+    text-shadow: $x-offset $y-offset $blur $color;
+}
+
+/**
+ * Mixin para animaciones.
+ *
+ * Aplica una animación personalizada a un elemento.
+ *
+ * Argumentos:
+ *   - $name: Nombre de la animación.
+ *   - $duration: Duración de la animación.
+ *   - $timing-function: Función de temporización de la animación.
+ *   - $delay: Retraso antes de que comience la animación.
+ *   - $iteration-count: Cantidad de veces que se repetirá la animación.
+ *   - $direction: Dirección de la animación.
+ */
+@mixin animation($name, $duration, $timing-function, $delay, $iteration-count, $direction) {
+    animation: $name $duration $timing-function $delay $iteration-count $direction;
+}
+
+/**
+ * Mixin para sombra de caja.
+ *
+ * Aplica una sombra de caja personalizada a un elemento.
+ *
+ * Argumentos:
+ *   - $x-offset: Desplazamiento horizontal de la sombra.
+ *   - $y-offset: Desplazamiento vertical de la sombra.
+ *   - $blur: Desenfoque de la sombra.
+ *   - $spread: Extensión de la sombra.
+ *   - $color: Color de la sombra.
+ */
+@mixin box-shadow($x-offset, $y-offset, $blur, $spread, $color) {
+    box-shadow: $x-offset $y-offset $blur $spread $color;
+}
+
+/**
+ * Mixin para transiciones.
+ *
+ * Aplica una transición personalizada a las propiedades de un elemento.
+ *
+ * Argumentos:
+ *   - $properties: Propiedades a las que se aplicará la transición.
+ *   - $duration: Duración de la transición.
+ *   - $timing-function: Función de temporización de la transición.
+ *   - $delay: Retraso antes de que comience la transición.
+ */
+@mixin transition($properties, $duration, $timing-function, $delay) {
+    transition: $properties $duration $timing-function $delay;
+}

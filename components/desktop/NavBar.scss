@@ -1,7 +1,11 @@
-@media (min-width: 1024px){
-    
+@import "../../base/settings";
+
+/* Tamaño de pantalla grande */
+@media screen and (min-width: $computadoraGrande) {
+    /* Estilos para pantallas grandes */
 }
 
-@media (min-width: 1800px){
-
+/* Tamaño de pantalla pequeña */
+@media screen and (min-width: $computadoraMediana) {
+    /* Estilos para pantallas pequeñas */
 }

@@ -1,3 +1,11 @@
-@media (min-width: 320px){
-    
+@import "../../base/settings";
+
+/* Tamaño de pantalla de teléfono en orientación horizontal */
+@media screen and (min-width: $telefono) and (max-width: $tablet) {
+    /* Estilos para teléfono en orientación horizontal */
+}
+  
+/* Tamaño de pantalla de teléfono en orientación vertical */
+@media screen and (min-width: $telefono) {
+    /* Estilos para teléfono en orientación vertical */
 }
